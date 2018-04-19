@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<style>
+        body {
+			margin: 0;
+			padding: 0;
+			font-family: "Hiragino Sans GB", "Helvetica Neue", Helvetica, STHeiTi, sans-serif; color: #666666; background-color: #fff;
+            /*background-color: yellowgreen;*/
+        }
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		/**
+	     * 获取url中参数的值
+	     * @param  {[type]} name 参数名
+	     * @return {[type]}      参数值
+	     */
+	    function getQueryString(name){
+	        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	        var r = window.location.search.substr(1).match(reg);
+	        if (r != null) return decodeURI(r[2]);
+	        return null;
+	    }
+	    var cpro_id = getQueryString('ggid');
+	</script>
+	<script src="http://cpro.baidustatic.com/cpro/ui/cm.js"></script>
+</body>
+</html>
